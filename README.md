@@ -21,7 +21,7 @@ A version support custom range scanning and multi address scanning.
 # Usage
 - Example for bitcoin puzzle 66
     ```
-    ./vanitysearch -t 0 -gpu -gpuId 0 -i in.txt -o out.txt --keyspace 2xxxxxx0000000000:+FFFFFFFFFF
+    ./vanitysearch -t 0 -gpu -gpuId 0 -i in.txt -o out.txt --keyspace 20000000000000000:+FFFFFFFFFF
     ```
 
     ```
