@@ -1,5 +1,6 @@
 # VanitySearch
 A version support custom range scanning and multi address scanning.
+
 This is a modified version of VanitySearch by [JeanLucPons](https://github.com/JeanLucPons/VanitySearch/).
 
 # Build
