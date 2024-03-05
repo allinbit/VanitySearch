@@ -23,3 +23,10 @@ A version support custom range scanning and multi address scanning.
     ```
     ./vanitysearch -t 0 -gpu -gpuId 0 -i in.txt -o out.txt --keyspace 2xxxxxx0000000000:+FFFFFFFFFF
     ```
+
+    ```
+    in.txt
+    1KZegRZVRkVPUcR6iCZWukdeeP6xuEwpo9 /privatekey:20000000000000001
+    1JWHHMMjU4YjVd4gU6jVw3zPMsGKMJUiQw /privatekey:20000000100000000
+    13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so /targetaddress
+    ```
