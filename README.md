@@ -6,12 +6,11 @@ This is a modified version of VanitySearch by [JeanLucPons](https://github.com/J
 # Build
 ## Windows
 
-Intall CUDA SDK and open VanitySearch.sln in Visual C++ 2017.\
-You may need to reset your *Windows SDK version* in project properties.\
-In Build->Configuration Manager, select the *Release* configuration.\
-Build and enjoy.\
-\
-Note: The current relase has been compiled with CUDA SDK 10.0, if you have a different release of the CUDA SDK, you may need to update CUDA SDK paths in VanitySearch.vcxproj using a text editor. The current nvcc option are set up to architecture starting at 3.0 capability, for older hardware, add the desired compute capabilities to the list in GPUEngine.cu properties, CUDA C/C++, Device, Code Generation.
+- Intall CUDA SDK and open VanitySearch.sln in Visual C++ 2017.
+- You may need to reset your *Windows SDK version* in project properties.
+- In Build->Configuration Manager, select the *Release* configuration.
+
+- Note: The current relase has been compiled with CUDA SDK 10.0, if you have a different release of the CUDA SDK, you may need to update CUDA SDK paths in VanitySearch.vcxproj using a text editor. The current nvcc option are set up to architecture starting at 3.0 capability, for older hardware, add the desired compute capabilities to the list in GPUEngine.cu properties, CUDA C/C++, Device, Code Generation.
 
 ## Linux
 - Edit the makefile and set up the appropriate CUDA SDK and compiler paths for nvcc.
