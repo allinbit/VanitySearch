@@ -28,7 +28,7 @@ public:
   * Possible patterns allow to match single characters ('?') or any count of
   * characters ('*')
   */
-  static bool match(const char *str, const char *pattern,bool caseSensitive);
+  static bool match(const char *str, const char *pattern);
 
 };
 

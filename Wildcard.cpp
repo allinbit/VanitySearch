@@ -20,7 +20,7 @@
 using namespace std;
 
 
-bool Wildcard::match(const char *str, const char *pattern, bool caseSensitive) {
+bool Wildcard::match(const char *str, const char *pattern) {
 
   const char *s;
   const char *p;
@@ -40,14 +40,9 @@ loopStart:
       if (!*++pattern) return true;
       goto loopStart;
 
-    default:
-      if (caseSensitive) {
+    default:     
         if (*s != *p)
-          goto starCheck;
-      } else {
-        if (tolower(*s) != tolower(*p))
-          goto starCheck;
-      }
+          goto starCheck;     
       break;
     } /* endswitch */
 

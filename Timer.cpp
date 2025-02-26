@@ -17,7 +17,7 @@
 
 #include "Timer.h"
 
-static const char *prefix[] = { "","Kilo","Mega","Giga","Tera","Peta","Hexa" };
+static const char *address[] = { "","Kilo","Mega","Giga","Tera","Peta","Hexa" };
 
 #ifdef WIN64
 
@@ -44,7 +44,6 @@ void Timer::Init() {
 #else
   tickStart=time(NULL);
 #endif
-
 }
 
 double Timer::get_tick() {
@@ -59,7 +58,6 @@ double Timer::get_tick() {
     gettimeofday(&tv, NULL);
     return (double)(tv.tv_sec - tickStart) + (double)tv.tv_usec / 1e6;
 #endif
-
 }
 
 std::string Timer::getSeed(int size) {
@@ -130,7 +128,6 @@ std::string Timer::getSeed(int size) {
   
   free(buff);
   return ret;
-
 }
 
 
@@ -143,7 +140,7 @@ std::string Timer::getResult(char *unit, int nbTry, double t0, double t1) {
     pIdx++;
     nbCallPerSec = nbCallPerSec / 1000.0;
   }
-  sprintf(tmp, "%.3f %s%s/sec", nbCallPerSec, prefix[pIdx], unit);
+  sprintf(tmp, "%.3f %s%s/sec", nbCallPerSec, address[pIdx], unit);
   return std::string(tmp);
 
 }
@@ -154,19 +151,6 @@ void Timer::printResult(char *unit, int nbTry, double t0, double t1) {
 
 }
 
-int Timer::getCoreNumber() {
-
-#ifdef WIN64
-  SYSTEM_INFO sysinfo;
-  GetSystemInfo(&sysinfo);
-  return sysinfo.dwNumberOfProcessors;
-#else
-  // TODO
-  return 1;
-#endif
-
-}
-
 void Timer::SleepMillis(uint32_t millis) {
 
 #ifdef WIN64
@@ -174,5 +158,4 @@ void Timer::SleepMillis(uint32_t millis) {
 #else
   usleep(millis*1000);
 #endif
-
 }
