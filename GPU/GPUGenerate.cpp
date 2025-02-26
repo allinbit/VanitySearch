@@ -20,7 +20,6 @@
 
 using namespace std;
 
-
 void GPUEngine::GenerateCode(Secp256K1 *secp, int size) {
 
   // Compute generator table
@@ -60,5 +59,4 @@ void GPUEngine::GenerateCode(Secp256K1 *secp, int size) {
 
   fclose(f);
   delete[] Gn;
-
 }
