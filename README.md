@@ -3,7 +3,7 @@ A version support custom range scanning and multi address scanning.
 
 This is a modified version of VanitySearch by [JeanLucPons](https://github.com/JeanLucPons/VanitySearch/).
 
-Performance optimization completed by [aaelick](https://github.com/aaelick).
+Performance optimization completed by [aaelick](https://github.com/aaelick). Only one GPU per instance.
 
 # Build
 ## Windows
