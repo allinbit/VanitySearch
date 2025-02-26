@@ -28,7 +28,7 @@ This is a modified version of VanitySearch by [JeanLucPons](https://github.com/J
     ```
     $ make all
     ```
-    **Attention!!! You need to use g++-9 or a lower version to compile, otherwise the program will not run properly.**
+- **Attention!!! You need to use g++-9 or a lower version to compile, otherwise the program will not run properly.**
 
 # Usage
 - Example for bitcoin puzzle 68
