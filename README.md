@@ -20,7 +20,7 @@ This is a modified version of VanitySearch by [JeanLucPons](https://github.com/J
     ...
     
     CXX        = g++-9
-    CUDA       = /usr/local/cuda-11.7
+    CUDA       = /usr/local/cuda-11.8
     CXXCUDA    = /usr/bin/g++-9
     ```
 
@@ -28,16 +28,17 @@ This is a modified version of VanitySearch by [JeanLucPons](https://github.com/J
     ```
     $ make all
     ```
+    Attention!!! You need to use g++-9 or a lower version to compile, otherwise the program will not run properly.
 
 # Usage
-- Example for bitcoin puzzle 66
+- Example for bitcoin puzzle 68
     ```
-    ./vanitysearch -t 0 -gpu -gpuId 0 -i in.txt -o out.txt --keyspace 20000000000000000:+FFFFFFFFFF
+    ./vanitysearch -t 0 -gpu -gpuId 0 -i in.txt -o out.txt --keyspace 80000000000000000:+FFFFFFFFFF
     ```
 
     ```
     in.txt
-    1KZegRZVRkVPUcR6iCZWukdeeP6xuEwpo9 /privatekey:20000000000000001
-    1JWHHMMjU4YjVd4gU6jVw3zPMsGKMJUiQw /privatekey:20000000100000000
-    13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so /targetaddress
+    1DRd8L1KktWwqVLm3myS4vugQV3ai1LPeN /privatekey:80000000000001000
+    15oCidgtdDz6VVKiMsZjRvHR9scJvN9GAX /privatekey:80000000000100000
+    1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ /targetaddress
     ```
