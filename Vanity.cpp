@@ -522,36 +522,36 @@ void VanitySearch::output(string addr, string pAddr, string pAddrHex, std::strin
 	}
 
 	fprintf(f, "\nPublic Addr: %s\n", addr.c_str());	
-	fprintf(stdout, "\nPublic Addr: %s\n", addr.c_str());
+	//fprintf(stdout, "\nPublic Addr: %s\n", addr.c_str());
 	//fprintf(stderr, "\nPublic Addr: %s\n", addr.c_str());
 
 	switch (searchType) {
 	case P2PKH:
 		fprintf(f, "Priv (WIF): p2pkh:%s\n", pAddr.c_str());
-		fprintf(stdout, "Priv (WIF): p2pkh:%s\n", pAddr.c_str());
+		//fprintf(stdout, "Priv (WIF): p2pkh:%s\n", pAddr.c_str());
 		//fprintf(stderr, "Priv (WIF): p2pkh:%s\n", pAddr.c_str());
 		break;
 	case P2SH:
 		fprintf(f, "Priv (WIF): p2wpkh-p2sh:%s\n", pAddr.c_str());
-		fprintf(stdout, "Priv (WIF): p2wpkh-p2sh:%s\n", pAddr.c_str());
+		//fprintf(stdout, "Priv (WIF): p2wpkh-p2sh:%s\n", pAddr.c_str());
 		//fprintf(stderr, "Priv (WIF): p2wpkh-p2sh:%s\n", pAddr.c_str());
 		break;
 	case BECH32:
 		fprintf(f, "Priv (WIF): p2wpkh:%s\n", pAddr.c_str());
-		fprintf(stdout, "Priv (WIF): p2wpkh:%s\n", pAddr.c_str());
+		//fprintf(stdout, "Priv (WIF): p2wpkh:%s\n", pAddr.c_str());
 		//fprintf(stderr, "Priv (WIF): p2wpkh:%s\n", pAddr.c_str());
 		break;
 	}
 
 	fprintf(f, "Priv (HEX): 0x%064s\n", pAddrHex.c_str());	
-	fprintf(stdout, "Priv (HEX): 0x%064s\n", pAddrHex.c_str());
+	//fprintf(stdout, "Priv (HEX): 0x%064s\n", pAddrHex.c_str());
 	//fprintf(stderr, "Priv (HEX): 0x%064s\n", pAddrHex.c_str());
 
 	//fprintf(f, "PubK (HEX): 0x%s\n", pubKey.c_str());
 	//fprintf(stdout, "PubK (HEX): 0x%s\n", pubKey.c_str());
 
 	fflush(f);
-	fflush(stdout);
+	//fflush(stdout);
 	//fflush(stderr);	
 
 	if (needToClose)
